@@ -160,17 +160,23 @@ td{
 input, select, textarea{
     color: #777777;
 }
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media (min-width: 300px) and (max-width: 640px) {
     body{
-        background-color: none;
+
+    width: 100%;
     }
     .container{
-        width: 100%;
+        max-width: 640px;
+        max-height: 100%;
+    }
+    h1{
+        font-size: 5vw;
     }
     #logo{
-        width: 50%;
-        height: 50%;
+        max-width: 25%;
+        max-height: 25%;
         float: center; 
     }
     ul {
@@ -192,7 +198,19 @@ input, select, textarea{
     li {
         float: left;
     }
-    
+    #headshot{
+        width:128px; 
+        height:142px; 
+        margin-right: 20px;
+    }
+    .main_content{
+        width: 300px;
+        background-color: #ffffff;
+        color: #777777;
+        float: left;
+        line-height: 1.5;
+        padding: 20px 15px 20px 15px;
+    }
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
