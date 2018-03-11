@@ -1,35 +1,94 @@
 *{
     box-sizing: border-box;
 }
+
 body{
     background-color: #c6bebe;
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
 }
-.container{
-    width: 960px;
-    padding: 0px;
-    margin: auto;
-}
-.navbar{
-    border: 0px;
+header{
+    background-color: #ffffff;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.navbar-default {
-    background-color: #fff;
+.header_container{
+    padding: 0px;
+}
+#logo{
+    float: left;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 25px;
+    overflow: hidden;
+    background-color:#ffffff;
+    color: #777777;
+}
+.divider {
+    width: 1px;
+    height: 22px;
+    background: #777777;
+    margin: 10px 0;
+}
+li {
+    float: right;
 }
 
-#headshot{
-    width:128px; 
-    height:142px; 
-    float: left; 
-    margin-right: 20px;
+li a {
+    display: inline-block;
+    color:#777777;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    line-height: 12px;
 }
-#main_content{
+
+a:hover { 
+    color: #B73F63; 
+}
+
+
+#name{
+    float: left;
+    background-color: #4aaaa5;
+    color:  #ffffff;
+    font-size: 40px;
+}
+
+#socmedia_icon{
+    width: 64px;
+    height: 64px;
+}
+p{
+    text-align: left;
+    font-size: 24px;
+}
+.container{
+    width: 960px;
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    flex: 1 0 auto;
+}
+.main_content{
+    width: 650px;
     background-color: #ffffff;
     color: #777777;
-    padding-bottom: 20px;
+    float: left;
+    line-height: 1.5;
+    padding: 20px 15px 20px 15px;
+}
+.sidebar{
+    width: 270px;
+    background-color: #ffffff;
+    color: #777777;
+    float: left;
+    margin-left: 40px;
+    text-align: center;
+    line-height: 1.5;
+    padding: 30px 20px 30px 20px;
 }
 h1{
     color: #4aaaa5;
@@ -39,52 +98,41 @@ h2{
     color: #4aaaa5;
     font-size: 28px;
 }
-p{
-    font-size: 20px;
-    line-height: 1.5;
-}
-hr{
-    border-top: 2px solid #c6bebe;
-}
-#sidebar{
-    width: 270px;
-    background-color: #ffffff;
-    color: #777777;
-    float: left;
-    margin-left: 50px;
-    text-align: center;
-    line-height: 1.5;
-    padding: 10px;
-}
-.img_socmed{
-    width: 64px;
-    height: 64px;
-}
-footer {
+.footer{
     border-top: 5px solid #4aaaa5;
     background-color: #777777;
     flex-shrink: 0;
     color: #ffffff;
     line-height: 60px;
-    margin-top: 20px;
 }
 #p_footer{
     text-align: center;
     vertical-align: bottom;
     font-size: 12px;
 }
-.divider {
-    width: 1px;
-    height: 17px;
-    background: #777777;
-    margin: 18px 0;
+#headshot{
+    width:128px; 
+    height:142px; 
+    float: left; 
+    margin-right: 20px;
 }
 
-.btn-primary{
-    background-color:  #4aaaa5;
-    color: #ffffff;
-    border: 0px;
+input[type=text], select {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    line-height: 24px;
 }
+
+input[type=submit] {
+    width: 12%;
+    background-color:#4aaaa5;
+    border: none;
+    line-height: 26px;
+    color: #ffffff;
+}
+
 
 table{
     width: 100%;
@@ -93,7 +141,6 @@ table{
     height: 250px;
     width: 300px;
     display: inline-block;
-    padding: 10px;
 }
 td{
     position: relative;
@@ -107,9 +154,54 @@ td{
     transform: translate(-50%, -50%);
     color: #ffffff;
     background-color: #4aaaa5;
-    width: 92%;
+    width: 97%;
     text-align: center;
 }
 input, select, textarea{
     color: #777777;
 }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 300px) and (max-width: 640px) {
+    body{
+        background-color: none;
+    }
+    .container{
+        width: 100%;
+    }
+    #logo{
+        width: 50%;
+        height: 50%;
+        float: center; 
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+    }
+    
+    li a {
+        display: block;
+        color: #000;}
+    
+        li a:hover {
+        background-color: #555;
+        color: white;
+    }
+    li {
+        float: left;
+    }
+    
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 641px) and (max-width: 768px) {
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width:769px) and (max-width: 980px) {
+
+} 
+ 
